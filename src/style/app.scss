@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 60%;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+
+
+button,
+input,
+textarea,
+textarea:focus,
+textarea:active,
+input:focus,
+input:active, 
+button:active, 
+button:focus {
+    outline: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+textarea {
+    resize: vertical;
+}
+
+a {
+    text-decoration: none;
+}
+.container {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    .content {
+        margin: 60px auto;
+        button {
+            border: none;
+            padding: 1em 1.5em;
+            border-radius: 12%;
+            background:rgb(47, 47, 245);
+            color: #fff;
+        }
+    }
+    .add-form {
+        &__row {
+            margin-bottom: 30px;
+        }
+        .form-group{
+            .add-form__row{
+                input, textarea{
+                    margin-top: 1em;
+                    padding: 0;
+                    width: 350px;
+                    padding: 1em;
+                    font-size: 1em;
+                }
+            }
+        }
+        
+    }
+}
